@@ -1,0 +1,82 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #424242;
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+}
+
+.v-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.v-legend {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (min-width: 600px) {
+  .v-legend {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.legend-title {
+  margin-bottom: 0.5rem;
+}
+
+.size-legend .item text {
+  font-size: 0.75rem;
+}
+
+.size-legend .item circle,
+.size-legend .item polyline {
+  fill: none;
+  stroke: currentColor;
+  stroke-dasharray: 4 2;
+}
+
+.v-container .tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.v-container .tooltip.is-visible {
+  opacity: 1;
+}
+
+.bubble-map .country {
+  fill: #fff;
+  fill-opacity: 0.1;
+  stroke: #fff;
+  stroke-opacity: 0.2;
+  stroke-width: 0.5px;
+  vector-effect: non-scaling-stroke;
+}
+
+.bubble-map .bubble {
+  fill: #fff;
+  fill-opacity: 0.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.bubble-map .country.is-active,
+.bubble-map .bubble.is-active {
+  stroke: #fff;
+  stroke-opacity: 0.5;
+  stroke-width: 1px;
+}
